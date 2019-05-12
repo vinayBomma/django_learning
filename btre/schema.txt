@@ -1,0 +1,45 @@
+Database Fields:
+
+Listings:
+id: INT 
+realtor: INT (foreign key from realtor)
+title: STR
+address: STR
+city: STR
+state: STR
+zipcode: STR
+description: TEXT
+price: INT
+bedrooms: INT
+isPublished: boolean default TRUE
+bathrooms: INT
+garage: INT default 0 
+list_date: date
+sq_feet: INT
+lot_size: FLOAT
+photo_main: STR
+photo_other: STR
+|| === || 5 more photo Fields
+
+
+Realtors:
+id: INT
+name: STR
+photo: STR
+desc: TEXT
+email: STR
+phone: STR
+isMVP: boolean default TRUE
+hired_date: date
+
+
+Contact:
+id:INT
+user_id: INT
+listing: INT
+listing_id: INT
+name: STR
+email: STR
+phone: STR
+msg: TEXT
+Contact_date: date
