@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Contact
-from django.core import send_mail 
+from django.core.mail import send_mail 
 
 # Create your views here.
 def contact(request):
@@ -10,7 +10,7 @@ def contact(request):
         name = request.POST['name']
         email = request.POST['email']
         phone = request.POST['phone']
-        message = request.POST['message']
+        message = request.POST['message'] 
         listing = request.POST['listing']
         user_id = request.POST['user_id']
         realtor_email = request.POST['realtor_email']
